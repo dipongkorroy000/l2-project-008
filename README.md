@@ -81,7 +81,6 @@ Tourists can browse available guides and book them for their tours, making it ea
 
 #### 🚀 Future Improvements
 
-- Add rating/review system for guides  
 - Implement push notifications for booking updates  
 - Enhance admin dashboard with analytics and reporting  
 - Support multi-currency payments for international tourists  
