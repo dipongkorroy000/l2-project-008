@@ -1,92 +1,87 @@
-# 🌍 Local Guide Project
+### Local Guide Platform
 
-A modern **Local Guide Web Application** built with **Next.js (frontend)** and **Express + Prisma (backend)**.  
-This project helps users explore, manage, and interact with local services seamlessly with a polished UI/UX.
-
-🔗 **Live Demo:** [Local Guide App](https://l2-assignment-008-frontend-577l.vercel.app)
+This project is a **Local Guide Platform** where anyone can create a guide account by fulfilling certain requirements.  
+Tourists can browse available guides and book them for their tours, making it easier to connect travelers with trusted local experts.
 
 ---
 
-## 🚀 Tech Stack
+#### 🛠 Tech Stack
 
-### **Frontend (Client)**
+- **Backend**
+  - **Node.js** → Server-side runtime for building scalable APIs
+  - **Express.js** → Web framework for routing and middleware
+  - **MongoDB** → Database for storing users, guides, and bookings
+  - **Mongoose** → ODM for managing MongoDB models
+  - **Firebase Auth** → Secure authentication and role management
+  - **Stripe/Payment Gateway** → (if integrated) for handling booking payments
 
-- **Framework:** [Next.js 16](https://nextjs.org/)
-- **UI & Styling:**
-  - [TailwindCSS 4](https://tailwindcss.com/)
-  - [Radix UI](https://www.radix-ui.com/) components (`accordion`, `dialog`, `select`, `tooltip`, etc.)
-  - [lucide-react](https://lucide.dev/) (icons)
-  - [framer-motion](https://www.framer.com/motion/) (animations)
-  - [nprogress](https://github.com/rstacruz/nprogress) (loading bar)
-  - [tw-animate-css](https://www.npmjs.com/package/tw-animate-css) (animations)
-- **Forms & Validation:**
-  - [react-hook-form](https://react-hook-form.com/)
-  - [zod](https://zod.dev/) (schema validation)
-  - [@hookform/resolvers](https://react-hook-form.com/docs/useform/#resolver)
-- **State & Utilities:**
-  - [next-themes](https://github.com/pacocoursey/next-themes) (theme switching)
-  - [clsx](https://github.com/lukeed/clsx) & [tailwind-merge](https://tailwind-merge.vercel.app/) (class utilities)
-  - [class-variance-authority](https://cva.style/) (variant styling)
-- **Charts & Maps:**
-  - [recharts](https://recharts.org/) (data visualization)
-  - [ol (OpenLayers)](https://openlayers.org/) (maps)
-- **Other Tools:**
-  - [sweetalert2](https://sweetalert2.github.io/) (alerts)
-  - [sonner](https://sonner.emilkowal.ski/) (toast notifications)
-  - [react-day-picker](https://react-day-picker.js.org/) (date picker)
-  - [react-icons](https://react-icons.github.io/react-icons/) (icon library)
-  - [cmdk](https://cmdk.paco.sh/) (command palette)
+- **Frontend**
+  - **React / Next.js** → Client-side UI for tourists and guides
+  - **Bootstrap / TailwindCSS** → Styling and responsive design
 
 ---
 
-### **Backend (Server)**
+#### 🔗 Roles & Features
 
-- **Framework:** [Express 5](https://expressjs.com/)
-- **Database & ORM:** [Prisma 6](https://www.prisma.io/) with [@prisma/client](https://www.prisma.io/docs/concepts/components/prisma-client)
-- **Authentication & Security:**
-  - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) (JWT auth)
-  - [bcryptjs](https://github.com/dcodeIO/bcrypt.js) (password hashing)
-  - [cookie-parser](https://github.com/expressjs/cookie-parser) (cookies)
-  - [cors](https://github.com/expressjs/cors) (CORS handling)
-- **File Uploads & Media:**
-  - [multer](https://github.com/expressjs/multer) (file uploads)
-  - [cloudinary](https://cloudinary.com/) (image hosting)
-- **Payments:**
-  - [stripe](https://stripe.com/) (payment gateway)
-- **Utilities:**
-  - [dotenv](https://github.com/motdotla/dotenv) (environment variables)
-  - [date-fns](https://date-fns.org/) (date utilities)
-  - [http-status](https://www.npmjs.com/package/http-status) (status codes)
+- **Guide**
+  - Register by fulfilling eligibility requirements
+  - Create and manage guide profile
+  - Accept bookings from tourists
+  - Provide tour details and confirmations
 
----
+- **Tourist**
+  - Create an account and log in securely
+  - Browse available guides
+  - Book guides for tours
+  - Track booking status and receive confirmations
 
-## 📦 Package Managers
-
-- **Frontend:** npm / pnpm
-- **Backend:** pnpm `v10.17.1`
+- **Admin**
+  - Manage platform users (guides and tourists)
+  - Monitor bookings and system activity
+  - Handle disputes or issues
 
 ---
 
-## ⚙️ Scripts
+#### 🔐 Authentication Flow
 
-### **Frontend**
-
-- `dev` → Run Next.js development server
-- `build` → Build production bundle
-- `start` → Start production server
-- `lint` → Run ESLint
-
-### **Backend**
-
-- `dev` → Run Express server with `ts-node-dev`
-- `test` → Placeholder test script
+1. User registers or logs in via **Firebase Auth**  
+2. Firebase issues a secure token  
+3. Backend verifies token and assigns role (Guide, Tourist, Admin)  
+4. Role-based access control ensures only authorized actions are allowed  
 
 ---
 
-## 🛠️ Development Setup
+#### 🗺️ Booking Flow
 
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd local-guide
-   ```
+1. Tourist browses available guides  
+2. Tourist selects a guide and creates a booking request (stored in MongoDB)  
+3. Guide accepts or rejects the booking  
+4. Tourist receives confirmation and tour details  
+5. After completion, booking status is updated in the system  
+
+---
+
+#### 📊 Benefits of This Platform
+
+- **Security** → Firebase Auth ensures safe login and role management  
+- **Reliability** → Real-time booking and confirmation updates  
+- **Scalability** → Node.js + MongoDB handle large numbers of users and bookings  
+- **Transparency** → Tourists can easily connect with trusted local guides  
+
+---
+
+#### ✅ Summary
+
+- Built with **Node.js**, **Firebase**, **MongoDB**, and modern frontend tools  
+- Supports three roles: **Guide**, **Tourist**, **Admin**  
+- Provides secure authentication, booking management, and confirmations  
+- Ensures smooth and reliable tour booking workflow  
+
+---
+
+#### 🚀 Future Improvements
+
+- Add rating/review system for guides  
+- Implement push notifications for booking updates  
+- Enhance admin dashboard with analytics and reporting  
+- Support multi-currency payments for international tourists  
