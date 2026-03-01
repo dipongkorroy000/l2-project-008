@@ -7,17 +7,16 @@ Tourists can browse available guides and book them for their tours, making it ea
 
 #### 🛠 Tech Stack
 
-- **Backend**
-  - **Node.js** → Server-side runtime for building scalable APIs
-  - **Express.js** → Web framework for routing and middleware
-  - **MongoDB** → Database for storing users, guides, and bookings
-  - **Mongoose** → ODM for managing MongoDB models
-  - **Firebase Auth** → Secure authentication and role management
-  - **Stripe/Payment Gateway** → (if integrated) for handling booking payments
+* **Backend**
+  * **Node.js** → Server-side runtime for building scalable APIs
+  * **Express.js** → Web framework for routing and middleware
+  * **PostgreSQL** → Relational database for storing users, guides, and bookings
+  * **Prisma** → Next-generation ORM for type-safe database access and migrations
+  * **Stripe/Payment Gateway** → (if integrated) for handling booking payments
 
 - **Frontend**
-  - **React / Next.js** → Client-side UI for tourists and guides
-  - **Bootstrap / TailwindCSS** → Styling and responsive design
+  - **Next.js** → Client-side UI for tourists and guides
+  - **TailwindCSS** → Styling and responsive design
 
 ---
 
