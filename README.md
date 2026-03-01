@@ -12,7 +12,7 @@ Tourists can browse available guides and book them for their tours, making it ea
   * **Express.js** → Web framework for routing and middleware
   * **PostgreSQL** → Relational database for storing users, guides, and bookings
   * **Prisma** → Next-generation ORM for type-safe database access and migrations
-  * **Stripe/Payment Gateway** → (if integrated) for handling booking payments
+  * **Stripe/Payment Gateway** → for handling booking payments
 
 - **Frontend**
   - **Next.js** → Client-side UI for tourists and guides
@@ -43,10 +43,8 @@ Tourists can browse available guides and book them for their tours, making it ea
 
 #### 🔐 Authentication Flow
 
-1. User registers or logs in via **Firebase Auth**  
-2. Firebase issues a secure token  
-3. Backend verifies token and assigns role (Guide, Tourist, Admin)  
-4. Role-based access control ensures only authorized actions are allowed  
+* Backend verifies token and assigns role (Guide, Tourist, Admin)  
+* Role-based access control ensures only authorized actions are allowed  
 
 ---
 
@@ -62,16 +60,15 @@ Tourists can browse available guides and book them for their tours, making it ea
 
 #### 📊 Benefits of This Platform
 
-- **Security** → Firebase Auth ensures safe login and role management  
 - **Reliability** → Real-time booking and confirmation updates  
-- **Scalability** → Node.js + MongoDB handle large numbers of users and bookings  
+- **Scalability** → Prisma + PostgreSQL handle large numbers of users and bookings  
 - **Transparency** → Tourists can easily connect with trusted local guides  
 
 ---
 
 #### ✅ Summary
 
-- Built with **Node.js**, **Firebase**, **MongoDB**, and modern frontend tools  
+- Built with **Express.js**, **Prisma**, **Postgres**, **Next.js** and modern frontend tools  
 - Supports three roles: **Guide**, **Tourist**, **Admin**  
 - Provides secure authentication, booking management, and confirmations  
 - Ensures smooth and reliable tour booking workflow  
